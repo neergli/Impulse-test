@@ -1,0 +1,42 @@
+/////////////////////////////////////
+// Fonts
+
+@font-face {
+    font-family: 'lytiga_procondensed';
+    src: url('../fonts/lytigaprocondensed-webfont.eot');
+    src: url('../fonts/lytigaprocondensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/lytigaprocondensed-webfont.woff2') format('woff2'),
+         url('../fonts/lytigaprocondensed-webfont.woff') format('woff'),
+         url('../fonts/lytigaprocondensed-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@at-root {
+  // Import the fonts
+  @font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+         url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+         url('../fonts/glyphicons-halflings-regular.ttf') format('truetype');
+  }
+}
+
+// Catchall baseclass
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Individual icons
+.glyphicon-triangle-bottom        { &:before { content: "\e252"; } }
+.glyphicon-triangle-top           { &:before { content: "\e253"; } }

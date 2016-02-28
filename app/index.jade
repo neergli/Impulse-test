@@ -1,0 +1,219 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='UTF-8')
+		title Impulse Test - Илья Рецер
+		// build:css css/vendor.css
+		link(rel="stylesheet", href="../assets/bower_components/normalize-css/normalize.css")
+		// endbuild	
+		// build:css css/bundle.css	
+		link(rel='stylesheet', href='styles/styles.css')
+		// endbuild
+	body
+		.container
+			.description
+				p - поддержка IE8+
+				p - рабочие табы и дропдаун-меню
+
+			.head.clearfix
+				.column.name
+					.row.row_label
+						.label Название
+					.row.row_content
+						.content
+							.content_main site.ru
+							.content_more.date 24.06.2014
+				.column.requests.tab
+					.row.row_label
+						.label Заявки:
+					.row.row_content
+						.content
+							.content_main
+								a(href="#") 19
+							.content_more
+								a(href="#") 0
+								|, 
+								a(href="#") 0
+				.column.themes.tab
+					.row.row_label
+						.label Темы:
+					.row.row_content
+						.content
+							.content_main
+								a(href="#") 0
+							.content_more
+								a(href="#") 0
+				.column.number.tab
+					.row.row_label
+						.label №:
+					.row.row_content
+						.content
+							.content_main
+								a(href="#") 21
+				.column.paragraph.tab
+					.row.row_label
+						.label Парагр.:
+					.row.row_content
+						.content
+							.content_main
+								a(href="#") 21
+				.column.approved.tab
+					.row.row_label
+						.label Одобр.
+					.row.row_content
+						.content
+							.content_main 0
+				.column.posted.tab
+					.row.row_label
+						.label Разм.
+					.row.row_content
+						.content.active
+							.content_main
+								a(href="#") 19
+								<span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+				.column.specification.disable.tab
+					.row.row_label
+						.label Уточнение
+					.row.row_content
+						.content
+							.content_main 0
+				.column.spent.disable.tab
+					.row.row_label
+						.label
+							| Потрачено,
+							br
+							| руб.
+					.row.row_content
+						.content
+							.content_main 0,00
+				.column.hold.tab
+					.row.row_label
+						.label
+							| Заморожено,
+							br
+							| руб. / заявок
+					.row.row_content
+						.content
+							.content_main
+								a(href="#") 2 335,57
+								<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+				.column.cart.dropdown
+					.row.row_content
+						.content
+							.content_main
+								.icon
+									<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+								ul.dropdown_menu
+									li
+										a(href="#") Раздел&nbsp;1
+									li
+										a(href="#") Раздел&nbsp;2
+									li
+										a(href="#") Раздел&nbsp;3
+				.column.search.dropdown
+					.row.row_content
+						.content
+							.content_main
+								.icon
+									<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+								ul.dropdown_menu
+									li
+										a(href="#") Раздел&nbsp;1
+									li
+										a(href="#") Раздел&nbsp;2
+									li
+										a(href="#") Раздел&nbsp;3
+				.column.settings.dropdown
+					.row.row_content
+						.content
+							.content_main
+								.icon
+									<span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+								ul.dropdown_menu
+									li
+										a(href="#") Раздел&nbsp;1
+									li
+										a(href="#") Раздел&nbsp;2
+									li
+										a(href="#") Раздел&nbsp;3
+			.body
+				.requests.tab_content
+					include body_row
+				.themes.tab_content
+					include body_row
+					include body_row
+					include body_row
+
+				.number.tab_content
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+
+				.paragraph.tab_content
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+
+				.approved.tab_content
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+				.posted.tab_content.on
+					.row
+						.column.date 24.06.14
+						.column.page
+							a(href="#") форум
+							span.accent  в новости 
+							|site2.ru
+						.column.value
+							|244,44
+							span.rub  руб.
+					.row
+						.column.date 24.06.14
+						.column.page
+							a(href="#") форум новый
+							span.accent  в новости 
+							|site.com
+						.column.value
+							|244,44
+							span.rub  руб.
+				.specification.tab_content
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+				.spent.tab_content
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+				.hold.tab_content
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+					include body_row
+		
+		// build:js js/vendor.js
+		script(src="scripts/jquery-1.12.1.min.js")
+		// endbuild	
+		// build:js js/common.js	
+		script(src="scripts/scripts.js")
+		// endbuild

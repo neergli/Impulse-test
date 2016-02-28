@@ -1,0 +1,273 @@
+/////////////////////////////////////
+// Resets
+*
+  box-sizing: border-box
+
+a
+  color: #2F92D5
+
+/////////////////////////////////////
+// Helpers
+.clearfix
+  &:before
+    content: ''
+    display: table
+  &:after
+    content: ''
+    display: table
+    clear: both
+
+/////////////////////////////////////
+// Vars
+$main_text_color: #333
+$text_color_mute: #969696
+
+/////////////////////////////////////
+// Main styles
+html
+  font-size: 10px
+body
+  font-family: 'lytiga_procondensed', Arial, sans-serif
+  font-size: 1em
+  letter-spacing: 0.1em
+  color: $main_text_color
+  text-align: center
+  padding-top: 50px
+
+.description
+  padding: 50px 0
+
+.container
+  display: inline-block
+
+.column
+  float: left
+
+.row
+  position: relative
+
+.row_content
+  background-color: #EBF0F2
+  border-bottom: 1px solid #C9D2D5
+  padding-top: 1px
+
+.label, .content
+  padding-left: 5px
+  padding-right: 5px
+  text-align: right
+
+.label
+  height: 37px
+  display: table-cell
+  vertical-align: middle
+
+.content
+  height: 41px
+  bottom: 0
+  padding-top: 12px
+  width: 100%
+  border: 1px solid transparent
+  margin-bottom: -1px
+  font-size: 11px
+
+.tab .content
+  cursor: pointer
+
+.tab .content:hover
+  background-color: rgba(255,255,255, 0.5)
+ 
+.content_more
+  font-size: 10px
+  color: $text_color_mute
+  line-height: 0.9
+
+.content_main
+  position: relative
+  display: inline-block
+
+.tab .active
+  background-color: #FAFAFA
+  border: 1px solid #C9D2D5
+  border-bottom: none
+
+.disable .content, .date, .rub
+  color: $text_color_mute
+
+.accent
+  color: #F90
+
+.dropdown
+  padding-top: 37px
+  .content
+    padding-top: 7px
+
+%dropdown_border
+  border: 0px solid #333
+  border-width: 1px 0 0 1px
+  background-color: #fff
+
+.dropdown_menu
+  position: absolute
+  top: 100%
+  right: 0
+  display: none
+  padding: 11px 13px
+  margin: -1px 0 0
+  list-style: none
+  z-index: 10
+  @extend %dropdown_border
+  li
+    line-height: 1.4
+
+.dropdown.open
+  .icon
+    @extend %dropdown_border
+  .dropdown_menu
+    display: block
+
+.icon
+  background-repeat: no-repeat
+  background-position: 25% 50%
+  width: 30px
+  height: 20px
+  display: inline-block
+  z-index: 100
+  position: relative
+  text-align: right
+  cursor: pointer
+  border: 0px solid transparent
+  border-width: 1px 0 0 1px
+  .glyphicon
+    position: relative
+    top: 3px
+    left: -3px
+    color: #646464
+
+.glyphicon
+  font-size: 7px
+  top: -1px
+  left: 3px
+
+.name
+  .label
+    width: 132px
+    padding-left: 12px
+    text-align: left
+  .content
+    padding-left: 12px
+    text-align: left
+
+.requests
+  .label
+    width: 65px
+
+.themes
+  .label
+    width: 55px
+  .content
+    padding-right: 15px 
+
+.number
+  .label
+    width: 44px
+
+.paragraph
+  .label
+    width: 58px
+
+.approved
+  .label
+    width: 50px
+
+.posted
+  .label
+    width: 40px
+  .content
+    padding-right: 10px
+  .content_main
+    color: #2F92D5
+    position: relative
+    a
+      border-bottom: 1px dashed
+      text-decoration: none
+
+.specification
+  .label
+    width: 69px
+  .content
+    padding-right: 15px 
+
+.spent
+  .label
+    width: 84px
+  .content
+    padding-right: 15px 
+
+.hold
+  .label
+    width: 103px
+  .content_main
+    color: #2F92D5
+    a
+      border-bottom: 1px dashed
+      text-decoration: none
+
+.cart
+  width: 42px
+  .content
+    padding-left: 0
+    padding-right: 0
+  .icon
+    // background-image: url('../images/icon_cart.png')
+    +sprite($icon-cart)
+    background-position: 2px -36px
+
+.search
+  width: 33px
+  .content
+    padding-left: 0
+    padding-right: 0
+  .icon
+    // background-image: url('../images/icon_search.png')
+    +sprite($icon-search)
+    background-position: 2px 4px
+
+.settings
+  width: 38px
+  .content_main
+    margin-right: 6px
+  .content
+    padding-left: 0
+    padding-right: 0
+  .icon
+    // background-image: url('../images/icon_settings.png')
+    +sprite($icon-settings)
+    background-position: 2px -16px
+
+
+
+.body
+  padding: 10px 12px
+  background-color: #FAFAFA
+  .row
+    font-size: 12px
+    line-height: 1.6
+    @extend .clearfix
+  
+  .date
+    padding-right: 5px
+
+  .page
+    padding-right: 5px
+    width: 233px
+    text-align: left
+
+  .value
+    text-align: right
+
+.tab_content
+  display: none
+
+.tab_content.on
+  display: block
+
